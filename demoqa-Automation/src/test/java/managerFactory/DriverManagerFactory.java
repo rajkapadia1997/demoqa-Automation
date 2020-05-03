@@ -9,6 +9,9 @@ public class DriverManagerFactory {
 		if (browserType.equals(BrowserTypes.Safari)) {
 			return new SafariDriverManager();
 		}
+		if (browserType.equals(BrowserTypes.Firefox)) {
+			return new FirefoxDriverManager();
+		}
 
 		throw new RuntimeException(browserType + " is not a supported browser.");
 
